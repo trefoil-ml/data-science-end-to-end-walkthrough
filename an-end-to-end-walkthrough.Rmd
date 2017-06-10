@@ -1,0 +1,67 @@
+---
+title: "Data science end-to-end Walkthrough"
+subtitle: "In-database analytics with and R and SQL server"
+venue: "ITViate data science courses"
+type: "invited"
+recording: "none"
+output:
+  ioslides_presentation:
+    transition: default
+    widescreen: true
+    standalone: false
+css: styles.css
+date: "Slides -- <http://bit.ly/2q9NPSU>  <br /> <br />"
+author: "Hicham Zmarrou"
+---
+
+
+```{r setup, echo = FALSE}
+knitr::opts_chunk$set(
+  message = FALSE,
+  fig.width = 10,
+  fig.height = 4,
+  comment = "#>",
+  collapse = TRUE,
+  warning = FALSE
+)
+```
+
+        
+## Aims of this lesson 
+
++ Give you a general introduction to neural networks, How they works and how to implement them in  `R`. 
+
+
+
+## What are Neural networks
+
+https://www.youtube.com/watch?v=bxe2T-V8XRs
+
+https://www.youtube.com/watch?v=UJwK6jAStmg
+
+https://www.youtube.com/watch?v=5u0jaA3qAGk&t=45s
+
+https://www.youtube.com/watch?v=GlcnxUlrtek
+
+https://www.youtube.com/watch?v=pHMzNW8Agq4
+
+https://www.youtube.com/watch?v=9KM9Td6RVgQ
+
+https://www.youtube.com/watch?v=S4ZUwgesjS8
+
+
+
+## Neural network from scratch
+
+```{r, echo=FALSE}
+library(ggplot2)
+moons <- read.csv("./data/moonsXY.csv")
+#moons[,1] <- NULL 
+sp<-ggplot(moons, aes(x=xcoord, y=ycoord, color=as.factor(label))) + geom_point()
+sp
+```
+
++ The dataset we generated has two classes, plotted as red and blue points. 
+
++ You can think of the blue dots as male patients and the red dots as female patients, with the x- and y- axis being medical measurements.
+
